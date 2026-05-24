@@ -1,0 +1,30 @@
+<section class="quest-board-expeditions">
+  <!-- <h2 id="titleExpeditions">Expecidions</h2> -->
+  <svg viewBox="0 0 300 80" width="300" height="80" id="titleExpeditions">
+  <defs>
+    <path id="arc" d="M 20,70 Q 150,30 280,70"/>
+  </defs>
+  <text font-family="'Jersey 10', sans-serif" fill="#CEA381" font-size="40">
+    <textPath href="#arc" startOffset="50%" text-anchor="middle">Expedicions</textPath>
+  </text>
+</svg>
+<div id="pins">
+  @for (exp of expeditions; track exp.id; let i = $index) {
+    <div class="pin-wrap" [id]="'pin' + (i+1)">
+      <img src="/assets/images/icon/icon-pin.svg" alt="icon-pin.svg">
+      <div class="tooltip" [id]="'info' + (i+1)">
+        @if (exp.name !== "") {
+          <div id="exp-name">
+            <p>{{exp.name}}</p>
+          </div>
+          <div id="exp-description">
+            <h2>{{exp.description}}</h2>
+          </div>
+        } @else {
+          <img src="/assets/images/icon/icon-question2.svg" alt="icon-question.svg">
+        }
+      </div>
+    </div>
+  }
+</div>
+</section>

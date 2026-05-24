@@ -1,0 +1,19 @@
+<section class="section-quest-board">
+  <div class="quest-board">
+    <div class="projects">
+      <div id="titleProjects">
+        <h2>Misions completades</h2>
+        <img src="/assets/images/icon/icon-papirus.svg" alt="icon-papirus.svg">
+      </div>
+      <div class="project-card">
+        @for (project of projects; track project.id) {
+          <app-quest-board-project-card [project]="project" />
+        }
+      </div>
+    </div>
+    <app-quest-board-inventory></app-quest-board-inventory>
+  </div>
+  <app-quest-board-academy-card id="section-academy"></app-quest-board-academy-card>
+  <app-quest-board-contracts></app-quest-board-contracts>
+  <app-quest-board-expeditions id="section-expeditions"></app-quest-board-expeditions>
+</section>

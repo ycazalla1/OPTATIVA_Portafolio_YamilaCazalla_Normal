@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "initialYear": 2023,
+    "finalYear": 2024,
+    "job": "Tècnica informàtica",
+    "enterprise": "Electrotecnics Distribuidor oficial DIGI/O2",
+    "ubication": "Sant Boi de Llobregat",
+    "tasks": [
+      {
+        "taskId": 1,
+        "description": "Reparació de mòvils, consoles, comandaments de consoles, ordinadors..."
+      },
+      {
+        "taskId": 2,
+        "description": "Instalació de sistemes operatius"
+      },
+      {
+        "taskId": 3,
+        "description": "Atenció al client + Dependenta."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "initialYear": 2024,
+    "finalYear": 2024,
+    "job": "Promotora Google Pixel 9/9 Pro/ 9 Pro XL",
+    "enterprise": "Salesland",
+    "ubication": "Cornellà de Llobregat",
+    "tasks": [
+      {
+        "taskId": 1,
+        "description": "Captació de clientela"
+      },
+      {
+        "taskId": 2,
+        "description": "Derivació efectiva de clients"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "initialYear": 2025,
+    "finalYear": 2026,
+    "job": "Junior Developer",
+    "enterprise": "Construsoft",
+    "ubication": "Sant Andreu de la Barca",
+    "tasks": [
+      {
+        "taskId": 1,
+        "description": "Suport en la creació de consultes SQL bàsiques per a l'extracció de dades de diferents taules."
+      },
+      {
+        "taskId": 2,
+        "description": "Col·laboració en l'elaboració d'informes i dashboards sota la supervisió de l'equip."
+      }
+    ]
+  }
+]

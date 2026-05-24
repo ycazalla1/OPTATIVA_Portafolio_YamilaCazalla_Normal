@@ -1,0 +1,28 @@
+<section class="quest-board-contracts">
+  <div id="c">
+    @for (contract of contracts; track contract.id; let i = $index) {
+      <div class="contracts" [ngStyle]="getPosition(i)">
+        <div id="years">
+          @if (contract.finalYear !== 0) {
+            <p>{{contract.initialYear}} - {{contract.finalYear}}</p>
+          } @else {
+            <p>{{contract.initialYear}} - actualment</p>
+          }
+        </div>
+        <div id="job">
+          <h2>{{contract.job}}</h2>
+        </div>
+        <div id="enterprise-ubication">
+          <h3>{{contract.enterprise}} | {{contract.ubication}}</h3>
+        </div>
+        <div id="tasks">
+          <ul>
+            @for (task of contract.tasks; track task.taskId) {
+              <li>{{task.description}}</li>
+            }
+          </ul>
+        </div>
+      </div>
+    }
+  </div>
+</section>

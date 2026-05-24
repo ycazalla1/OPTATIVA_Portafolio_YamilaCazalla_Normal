@@ -1,0 +1,36 @@
+<section class="section-player-card">
+  <div class="player-img">
+    <img src="assets/images/avatar/img-avatar.png" alt="img-avatar">
+  </div>
+  <div class="player-name">
+    <h1>YAMILA_DEV</h1>
+  </div>
+  <div class="player-rol">
+    <h2>Software Developer</h2>
+  </div>
+  <div class="player-lore">
+    <p>NPC que passa el dia programant videojocs i la nit jugant-los — tot amb finalitats d'investigació, evidentment.</p>
+  </div>
+  <div class="player-buttons">
+    <!-- <button>
+      <img src="/assets/images/icon/icon-play.svg" alt="icon-play">
+      Projectes
+    </button> -->
+    <button (click)="openPopup('contact')">
+      <img src="/assets/images/icon/icon-link.svg" alt="icon-link">
+      Contacte
+    </button>
+    @if (selectedContact) {
+      <div id="overlay">
+        <div id="popup-contacts">
+          @for (contact of contacts; track contact.id) {
+            <h3>{{contact.contact}}: <a href="{{contact.contactURL}}">{{contact.contactURL}}</a></h3>
+          }
+          <div id="buttonPopup">
+            <button (click)="closePopup()">Tancar</button>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

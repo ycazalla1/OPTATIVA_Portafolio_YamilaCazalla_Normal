@@ -1,0 +1,87 @@
+.quest-board-expeditions {
+  background-image: url("/assets/images/background/background-expeditions2.png");
+  width: 854px;
+  height: 609px;
+  margin-top: 50px;
+  position: relative;
+}
+
+#titleExpeditions {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente */
+  margin-top: 48px;
+  margin-left: 292px;
+  letter-spacing: 2px;
+}
+
+.pin-wrap {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  cursor: pointer;
+  font-family: "Jersey 10", sans-serif;
+  letter-spacing: 2px;
+}
+
+.pin-wrap:hover {
+  z-index: 999;
+}
+
+.pin-wrap img {
+  width: 40px;
+}
+
+.tooltip {
+  /* width: 350px;
+  height: 230px; */
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #F5E6C0;
+  border: 3px solid #954e42;
+  border-radius: 10%;
+  padding: 20px 25px 20px 25px;
+  z-index: 10;
+}
+
+.pin-wrap:hover .tooltip {
+  display: inline-block;
+}
+
+#pin1 { top: 35.5%; left: 12.7%; }
+#pin2 { top: 74.8%; left: 25.1%; }
+#pin3 { top: 59%; left: 36.7%; }
+#pin4 { top: 31.7%; left: 46.5%; }
+#pin5 { top: 52%; left: 58.9%; }
+#pin6 { top: 44.6%; left: 78.6%; }
+#pin7 { top: 20.1%; left: 88.2%; }
+
+#exp-name {
+  display: inline-block;
+  padding: 5px;
+  background-color: #A8D57A;
+  border-style:groove;
+  border-color: #8B5E1A;
+  border-radius: 30%;
+}
+
+/* #exp-name {
+  margin: 5px 0px 0px 0px;
+  color: #8B5E1A;
+} */
+
+/* #exp-description {
+  margin: 2px 0px 5px 0px;
+  color: #3E2A1F;
+} */
+
+#exp-description {
+  /* width: 300px; */
+  min-width: 250px;
+  max-width: 300px;
+  margin-top: 5px;
+  margin-left: 7px;
+  font-size: 10px;
+}
