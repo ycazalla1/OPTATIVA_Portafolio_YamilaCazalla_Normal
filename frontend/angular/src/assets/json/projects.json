@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "La Cantina",
+    "description": "Web d'una cantina amb Node.js, AJAX i base de dades.",
+    "tech": ["HTML", "JavaScript", "CSS"],
+    "status": "complete",
+    "xp": "+1000",
+    "xpProgress": 100,
+    "github": "https://github.com/ycazalla1/OPTATIVA_PT3_AJAX_DB_AndreaEsplugas_BagnerCarrion_YamilaCazalla"
+  },
+  {
+    "id": 2,
+    "title": "Keyly",
+    "description": "Gestor de contrasenyes multiplataforma amb React, Spring Boot i MySQL.",
+    "tech": ["Java"],
+    "status": "complete",
+    "xp": "+1000",
+    "xpProgress": 100,
+    "github": "https://github.com/leeyreserrano/keyly"
+  },
+  {
+    "id": 3,
+    "title": "Who is?",
+    "description": "Videojoc de misteri per a mòbil amb LibGDX i Java.",
+    "tech": ["Java", "Android Studio"],
+    "status": "complete",
+    "xp": "+1000",
+    "xpProgress": 100,
+    "github": "https://github.com/ycazalla1/0489_RA4_RA5_Who-is-"
+  }
+]

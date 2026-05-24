@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Videojoc de misteri",
+    "description": "Videojoc de misteri, on el protagonista és un detectiu que vol atrapar a un assassí. El que no sap és que ell és l'assassí, ja que té personalitat doble."
+  },
+  {
+    "id": 2,
+    "name": "Pàgina web de serveis",
+    "description": "Aplicació web que dona serveis a reparacions de diferents dispositius electrònics manera online."
+  },
+  {
+    "id": 3,
+    "name": "",
+    "description": ""
+  },
+  {
+    "id": 4,
+    "name": "",
+    "description": ""
+  },
+  {
+    "id": 5,
+    "name": "",
+    "description": ""
+  },
+  {
+    "id": 6,
+    "name": "",
+    "description": ""
+  },
+  {
+    "id": 7,
+    "name": "",
+    "description": ""
+  }
+]

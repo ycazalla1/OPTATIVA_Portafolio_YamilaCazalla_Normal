@@ -1,0 +1,134 @@
+.section-player-card {
+  background-image: url('/assets/images/background/background-hero.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 10px;
+}
+
+.section-player-card div {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente */
+}
+
+.player-img img {
+  width: 200px;
+  margin: 10px;
+  padding: 12px;
+  border: 5px;
+  border-style: solid;
+  border-image: linear-gradient(
+    to bottom,
+    #C89B3C,
+    #3E2A1F
+  ) 1;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #A8D57A 0px,
+      #A8D57A 8px,
+      #9CCC73 8px,
+      #9CCC73 16px
+    );
+  image-rendering: pixelated;
+}
+
+.player-name h1 {
+  font-family: "Jersey 10", sans-serif;
+  font-size: 70px;
+  color: #C89B3C;
+  text-shadow:
+      4px 4px 0 #3E2A1F,
+      8px 8px 0 #2F5D3A;
+}
+
+.player-rol h2 {
+  font-family: "Jersey 10", sans-serif;
+  font-size: 50px;
+  letter-spacing: 7px;
+  color: #5A8F3D;
+  text-shadow:
+      6px 6px 0 #2F5D3A;
+}
+
+.player-lore p {
+  width: 800px;
+  margin: 5px;
+  font-family: "Jersey 10", sans-serif;
+  font-size: 30px;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.player-buttons button {
+  margin: 5px 7px 10px 7px;
+  padding: 10px;
+  font-family: "Jersey 10", sans-serif;
+  font-size: 25px;
+  letter-spacing: 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  color: #F4E3B2;
+  background-color: #5A8F3D;
+
+  border: 4px solid #C89B3C;
+
+  box-shadow:
+      4px 4px 0 #2F5D3A;
+
+  cursor: pointer;
+
+  transition: 0.15s ease;
+}
+
+.player-buttons button img {
+  width: 30px;
+  image-rendering: pixelated;
+}
+
+#overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#popup-contacts {
+  display: inline-block;
+  background: #F5E6C0;
+  border: 4px solid #8B5E1A;
+  padding: 15px;
+  width: 600px;
+  font-family: "Jersey 10", sans-serif;
+  letter-spacing: 2px;
+}
+
+#popup-contacts h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#popup-contacts a {
+  color: #8B5E1A;
+}
+
+#buttonPopup {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente */
+}
+
+#popup-contacts button {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}

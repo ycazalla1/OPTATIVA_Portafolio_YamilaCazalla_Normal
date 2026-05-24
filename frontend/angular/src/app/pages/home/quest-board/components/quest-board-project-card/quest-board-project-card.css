@@ -1,0 +1,64 @@
+.quest-board-project-card{
+  background-image: url("/assets/images/background/background-project.png");
+  width: 570px;
+  height: 220px;
+  margin: 10px 0px 0px 0px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-left: 70px;
+  padding-right: 40px;
+  font-family: "Jersey 10", sans-serif;
+  letter-spacing: 2px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#data {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#info {
+  margin-top: 10px;
+}
+
+#info h2 {
+  font-size: 35px;
+}
+
+#tech img {
+  width: 45px;
+}
+
+#status img {
+  width: 80px;
+}
+
+#exp {
+  display: flex;
+  margin-top: auto;
+  align-items: center;
+  width: 100%;
+  padding-right: 20px;
+  gap: 10px;
+}
+
+#level-bar {
+  flex: 1;
+  width: 200px;
+  height: 20px;
+  background-color: #3b2412;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#fill {
+  width: 60%;
+  height: 100%;
+  background-color: #C89B3C;
+}

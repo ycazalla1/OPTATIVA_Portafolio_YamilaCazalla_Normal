@@ -1,0 +1,40 @@
+<section class="quest-board-project-card">
+  <div class="project-card">
+    <div id="data">
+      <div id="info">
+        <h2>{{ project.title }}</h2>
+        <p>{{ project.description }}</p>
+        <div id="tech">
+          @for (tech of project.tech; track tech) {
+            @if (tech === 'HTML') {
+              <img src="/assets/images/icon/icon-coin-html.svg" alt="icon-coin-html.svg">
+            } @else if (tech === 'CSS') {
+              <img src="/assets/images/icon/icon-coin-css.svg" alt="icon-coin-css.svg">
+            } @else if (tech === 'JavaScript') {
+              <img src="/assets/images/icon/icon-coin-javascript.svg" alt="icon-coin-javascript.svg">
+            } @else if (tech === 'Java') {
+              <img src="/assets/images/icon/icon-coin-java.svg" alt="icon-coin-java.svg">
+            }
+          }
+        </div>
+      </div>
+      <div id="status">
+        @if (project.status === Status.Complete) {
+          <img src="/assets/images/icon/icon-complete.svg" alt="icon-complete.svg">
+        } @else if (project.status === Status.InProgress) {
+          <img src="/assets/images/icon/icon-in-progress.svg" alt="icon-in-progress.svg">
+        } @else if (project.status === Status.New) {
+          <img src="/assets/images/icon/icon-new.svg" alt="icon-new.svg">
+        }
+      </div>
+    </div>
+    <div id="exp">
+      <p>XP</p>
+      <div id="level-bar">
+        <div id="fill"
+          [style.width.%]="project.xpProgress"></div>
+      </div>
+      <p>{{project.xp}}</p>
+    </div>
+  </div>
+</section>
