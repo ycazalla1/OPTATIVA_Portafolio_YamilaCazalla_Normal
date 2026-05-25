@@ -46,3 +46,30 @@ Portafolio personal desarrollado como proyecto final del módulo de Desarrollo W
 
 ## 👩‍💻 Autora
 Yamila Cazalla
+
+## ▶️ Instalación y uso
+
+### Requisitos previos
+- [Node.js](https://nodejs.org/) (v18 o superior)
+- [Angular CLI](https://angular.io/cli)
+
+```bash
+npm install -g @angular/cli
+```
+
+### Pasos
+```bash
+# 1. Clona el repositorio
+git clone https://github.com/ycazalla1/OPTATIVA_Portafolio_YamilaCazalla_Normal.git
+
+# 2. Entra en la carpeta
+cd OPTATIVA_Portafolio_YamilaCazalla_Normal
+
+# 3. Instala las dependencias
+npm install
+
+# 4. Arranca el servidor de desarrollo
+ng serve
+```
+
+Abre [http://localhost:4200](http://localhost:4200) en el navegador.
