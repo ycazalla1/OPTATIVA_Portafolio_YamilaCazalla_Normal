@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, PLATFORM_ID, inject, ChangeDetectorRef } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { Status } from '../../../enums.model';
@@ -28,20 +29,30 @@ interface Project {
   styleUrl: './quest-board.css',
 })
 
-export class QuestBoard {
+export class QuestBoard implements OnInit {
+
+  private platformId = inject(PLATFORM_ID);
+  private cdr = inject(ChangeDetectorRef);
+
   projects: Project[] = [];
 
   constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
 
-    this.http.get<Project[]>('assets/json/projects.json')
-      .subscribe(data => {
+    // this.http.get<Project[]>('assets/json/projects.json')
+    //   .subscribe(data => {
 
-        this.projects = data;
+    //     this.projects = data;
 
-        console.log(this.projects);
+    //     console.log(this.projects);
 
-      });
+    //   });
+    if (isPlatformBrowser(this.platformId)) {
+      const res = await fetch('/assets/json/projects.json');
+      this.projects = await res.json();
+      console.log(this.projects);
+      this.cdr.detectChanges();
+    }
   }
 }

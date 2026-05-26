@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, PLATFORM_ID, inject, ChangeDetectorRef } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
@@ -23,21 +24,31 @@ interface Contract {
   templateUrl: './quest-board-contracts.html',
   styleUrl: './quest-board-contracts.css',
 })
-export class QuestBoardContracts {
+export class QuestBoardContracts implements OnInit {
+
+  private platformId = inject(PLATFORM_ID);
+  private cdr = inject(ChangeDetectorRef);
+
   contracts: Contract[] = [];
 
   constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
 
-    this.http.get<Contract[]>('assets/json/jobs.json')
-      .subscribe(data => {
+    // this.http.get<Contract[]>('assets/json/jobs.json')
+    //   .subscribe(data => {
 
-        this.contracts = data;
+    //     this.contracts = data;
 
-        console.log(this.contracts);
+    //     console.log(this.contracts);
 
-      });
+    //   });
+    if (isPlatformBrowser(this.platformId)) {
+      const res = await fetch('/assets/json/jobs.json');
+      this.contracts = await res.json();
+      console.log(this.contracts);
+      this.cdr.detectChanges();
+    }
   }
 
   getPosition(index: number) {
