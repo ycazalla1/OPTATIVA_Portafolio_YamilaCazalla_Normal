@@ -10,5 +10,5 @@ WORKDIR /app
 COPY --from=build /app/dist/angular/server ./
 COPY --from=build /app/package*.json ./
 RUN npm install --omit=dev
-EXPOSE 3000
+EXPOSE 4000
 CMD ["node", "server.mjs"]
