@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for optativa-portafoli-yamilacazalla-weathered-waterfall-913 on 2026-05-27T12:45:05+02:00
+# fly.toml app configuration file generated for optativa-portafoli-yamilacazalla-wild-wildflower-387 on 2026-05-27T12:49:06+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'optativa-portafoli-yamilacazalla-weathered-waterfall-913'
+app = 'optativa-portafoli-yamilacazalla-wild-wildflower-387'
 primary_region = 'cdg'
 
 [build]
