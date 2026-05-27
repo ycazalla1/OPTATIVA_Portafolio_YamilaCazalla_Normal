@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for optativa-portafoli-yamilacazalla-small-meadow-5415 on 2026-05-27T01:36:26+02:00
+# fly.toml app configuration file generated for optativa-portafoli-yamilacazalla-weathered-waterfall-913 on 2026-05-27T12:45:05+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'optativa-portafoli-yamilacazalla-small-meadow-5415'
+app = 'optativa-portafoli-yamilacazalla-weathered-waterfall-913'
 primary_region = 'cdg'
 
 [build]
