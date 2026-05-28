@@ -5,6 +5,7 @@
         <h2>{{videos[currentPage].title}}</h2>
         <iframe
         [src]="getSafeUrl(videos[currentPage].urlId)"
+        [attr.key]="currentPage"
         frameborder="0"
         width="350"
         height="315"
