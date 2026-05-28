@@ -1,32 +1,28 @@
 <section class="quest-board-academy-card">
   <div id="pages">
     <div class="page">
-      @if (videos && videos.length > 0) {
+      @if (showVideos && videos && videos.length > 0) {
         <h2>{{videos[currentPage].title}}</h2>
-        @for (video of [videos[currentPage]]; track currentPage) {
-          <iframe
-          [src]="getSafeUrl(videos[currentPage].urlId)"
-          frameborder="0"
-          width="350"
-          height="315"
-          frameborder="0"
-          allowfullscreen></iframe>
-        }
+        <iframe
+        [src]="getSafeUrl(videos[currentPage].urlId)"
+        frameborder="0"
+        width="350"
+        height="315"
+        frameborder="0"
+        allowfullscreen></iframe>
       }
     </div>
     @if (!isMobile) {
       <div class="page">
-        @if (videos && videos.length > 1) {
+        @if (showVideos && videos && videos.length > currentPage + 1) {
             <h2>{{videos[currentPage+1].title}}</h2>
-            @for (video of [videos[currentPage + 1]]; track currentPage) {
-              <iframe
-              [src]="getSafeUrl(videos[currentPage+1].urlId)"
-              frameborder="0"
-              width="350"
-              height="315"
-              frameborder="0"
-              allowfullscreen></iframe>
-            }
+            <iframe
+            [src]="getSafeUrl(videos[currentPage+1].urlId)"
+            frameborder="0"
+            width="350"
+            height="315"
+            frameborder="0"
+            allowfullscreen></iframe>
         }
       </div>
     }

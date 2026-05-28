@@ -19,6 +19,7 @@ interface Academy {
 export class QuestBoardAcademyCard implements OnInit {
 
   isMobile = false;
+  showVideos = true;
   currentPage = 0;
 
   private platformId = inject(PLATFORM_ID);
@@ -69,10 +70,15 @@ export class QuestBoardAcademyCard implements OnInit {
   }
 
   nextPage() {
-    if (this.isMobile) {
-      this.currentPage += 1;
-    } else {
-      this.currentPage += 2;
-    }
+    this.showVideos = false;
+    setTimeout(() => {
+      if (this.isMobile) {
+        this.currentPage += 1;
+      } else {
+        this.currentPage += 2;
+      }
+      this.showVideos = true;
+      this.cdr.detectChanges();
+    }, 0);
   }
 }
