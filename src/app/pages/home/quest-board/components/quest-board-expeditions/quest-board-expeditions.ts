@@ -37,7 +37,7 @@ export class QuestBoardExpeditions implements OnInit {
       const res = await fetch('/assets/json/expeditions.json');
       this.expeditions = await res.json();
       console.log(this.expeditions);
-      this.cdr.detectChanges();
+      setTimeout(() => this.cdr.detectChanges());
     }
   }
 }

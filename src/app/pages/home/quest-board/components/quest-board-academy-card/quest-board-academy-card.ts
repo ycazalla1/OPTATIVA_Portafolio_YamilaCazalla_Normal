@@ -1,4 +1,5 @@
-import { Component, OnInit, PLATFORM_ID, inject, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, PLATFORM_ID, inject,
+  ChangeDetectorRef, HostListener } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
@@ -15,14 +16,27 @@ interface Academy {
   templateUrl: './quest-board-academy-card.html',
   styleUrl: './quest-board-academy-card.css',
 })
-export class QuestBoardAcademyCard {
+export class QuestBoardAcademyCard implements OnInit {
+
+  isMobile = false;
 
   private platformId = inject(PLATFORM_ID);
   private cdr = inject(ChangeDetectorRef);
 
-  videos: Academy[] = [];
+  constructor() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.isMobile = window.innerWidth < 950;
+    }
+  }
 
-  constructor(private http: HttpClient) {}
+  @HostListener('window:resize')
+  onResize() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.isMobile = window.innerWidth < 950;
+    }
+  }
+
+  videos: Academy[] = [];
 
   async ngOnInit(): Promise<void> {
 
@@ -38,7 +52,7 @@ export class QuestBoardAcademyCard {
       const res = await fetch('/assets/json/academy.json');
       this.videos = await res.json();
       console.log(this.videos);
-      this.cdr.detectChanges();
+      setTimeout(() => this.cdr.detectChanges());
     }
   }
 

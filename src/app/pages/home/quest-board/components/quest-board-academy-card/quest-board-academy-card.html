@@ -12,17 +12,19 @@
         allowfullscreen></iframe>
       }
     </div>
-    <div class="page">
-      @if (videos && videos.length > 1) {
-        <h2>{{videos[1].title}}</h2>
-        <iframe
-        [src]="getSafeUrl(videos[1].urlId)"
-        frameborder="0"
-        width="350"
-        height="315"
-        frameborder="0"
-        allowfullscreen></iframe>
-      }
-    </div>
+    @if (!isMobile) {
+      <div class="page">
+        @if (videos && videos.length > 1) {
+          <h2>{{videos[1].title}}</h2>
+          <iframe
+          [src]="getSafeUrl(videos[1].urlId)"
+          frameborder="0"
+          width="350"
+          height="315"
+          frameborder="0"
+          allowfullscreen></iframe>
+        }
+      </div>
+    }
   </div>
 </section>
