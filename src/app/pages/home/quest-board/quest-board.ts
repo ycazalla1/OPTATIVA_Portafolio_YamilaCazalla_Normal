@@ -52,7 +52,8 @@ export class QuestBoard implements OnInit {
       const res = await fetch('/assets/json/projects.json');
       this.projects = await res.json();
       console.log(this.projects);
-      setTimeout(() => this.cdr.detectChanges());
+      // setTimeout(() => this.cdr.detectChanges());
+      this.cdr.detectChanges();
     }
   }
 }

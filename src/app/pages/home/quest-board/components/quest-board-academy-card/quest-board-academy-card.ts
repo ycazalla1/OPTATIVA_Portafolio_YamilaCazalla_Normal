@@ -59,7 +59,8 @@ export class QuestBoardAcademyCard implements OnInit {
       const res = await fetch('/assets/json/academy.json');
       this.videos = await res.json();
       console.log(this.videos);
-      setTimeout(() => this.cdr.detectChanges());
+      // setTimeout(() => this.cdr.detectChanges());
+      this.cdr.detectChanges();
     }
   }
 
