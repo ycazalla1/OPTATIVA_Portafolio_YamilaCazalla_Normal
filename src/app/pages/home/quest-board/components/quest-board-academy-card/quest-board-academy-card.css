@@ -1,12 +1,13 @@
 .quest-board-academy-card {
 
-  background-image: url("/assets/images/background/background-one-video.png");
+  background-image: url("/assets/images/background/background-one-video2.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
   height: auto;
   aspect-ratio: 421 / 549;
+  position: relative;
 
   @media (min-width: 950px) {
     background-image: url("/assets/images/background/background-videos.png");
@@ -61,4 +62,27 @@
   aspect-ratio: 10 / 8;
   border: 4px solid #C89B3C;
   outline: 2px solid #7A5C1E;
+}
+
+#button-page {
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  bottom: 2.5%;
+  right: 8%;
+
+  @media (min-width: 950px) {
+    bottom: 2%;
+    right: 3%;
+  }
+}
+
+#button-page img {
+  @media (max-width: 949px) {
+    width: 13vw;
+    height: auto;
+    display: block;
+  }
 }

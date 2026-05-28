@@ -19,6 +19,7 @@ interface Academy {
 export class QuestBoardAcademyCard implements OnInit {
 
   isMobile = false;
+  currentPage = 0;
 
   private platformId = inject(PLATFORM_ID);
   private cdr = inject(ChangeDetectorRef);
@@ -32,7 +33,12 @@ export class QuestBoardAcademyCard implements OnInit {
   @HostListener('window:resize')
   onResize() {
     if (isPlatformBrowser(this.platformId)) {
+      const wasMobile = this.isMobile;
       this.isMobile = window.innerWidth < 950;
+
+      if (wasMobile && !this.isMobile) {
+        this.currentPage--;
+      }
     }
   }
 
@@ -60,5 +66,13 @@ export class QuestBoardAcademyCard implements OnInit {
 
   getSafeUrl(url: string): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+
+  nextPage() {
+    if (this.isMobile) {
+      this.currentPage += 1;
+    } else {
+      this.currentPage += 2;
+    }
   }
 }
