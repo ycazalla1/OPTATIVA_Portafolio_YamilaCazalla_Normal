@@ -47,7 +47,7 @@ export class PlayerCard implements OnInit {
       const res = await fetch('/assets/json/contacts.json');
       this.contacts = await res.json();
       console.log(this.contacts);
-      this.cdr.detectChanges();
+      setTimeout(() => this.cdr.detectChanges());
     }
   }
 }

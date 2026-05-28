@@ -47,7 +47,7 @@ export class QuestBoardContracts implements OnInit {
       const res = await fetch('/assets/json/jobs.json');
       this.contracts = await res.json();
       console.log(this.contracts);
-      this.cdr.detectChanges();
+      setTimeout(() => this.cdr.detectChanges());
     }
   }
 

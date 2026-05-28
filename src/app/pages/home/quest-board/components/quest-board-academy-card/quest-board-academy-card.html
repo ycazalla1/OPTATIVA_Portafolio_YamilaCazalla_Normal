@@ -2,9 +2,9 @@
   <div id="pages">
     <div class="page">
       @if (videos && videos.length > 0) {
-        <h2>{{videos[0].title}}</h2>
+        <h2>{{videos[currentPage].title}}</h2>
         <iframe
-        [src]="getSafeUrl(videos[0].urlId)"
+        [src]="getSafeUrl(videos[currentPage].urlId)"
         frameborder="0"
         width="350"
         height="315"
@@ -12,17 +12,22 @@
         allowfullscreen></iframe>
       }
     </div>
-    <div class="page">
-      @if (videos && videos.length > 1) {
-        <h2>{{videos[1].title}}</h2>
-        <iframe
-        [src]="getSafeUrl(videos[1].urlId)"
-        frameborder="0"
-        width="350"
-        height="315"
-        frameborder="0"
-        allowfullscreen></iframe>
-      }
-    </div>
+    @if (!isMobile) {
+      <div class="page">
+        @if (videos && videos.length > 1) {
+            <h2>{{videos[currentPage+1].title}}</h2>
+            <iframe
+            [src]="getSafeUrl(videos[currentPage+1].urlId)"
+            frameborder="0"
+            width="350"
+            height="315"
+            frameborder="0"
+            allowfullscreen></iframe>
+        }
+      </div>
+    }
   </div>
+  <button id="button-page" (click)="nextPage()">
+    <img src="/assets/images/buttons/button-page.png" alt="button-page.png">
+  </button>
 </section>
