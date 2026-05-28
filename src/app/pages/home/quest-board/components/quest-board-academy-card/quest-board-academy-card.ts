@@ -18,6 +18,8 @@ interface Academy {
 })
 export class QuestBoardAcademyCard implements OnInit {
 
+  isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
+
   isMobile = false;
   showVideos = true;
   currentPage = 0;
