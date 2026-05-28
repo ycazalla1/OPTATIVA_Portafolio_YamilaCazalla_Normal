@@ -1,7 +1,7 @@
 <section class="quest-board-academy-card">
   <div id="pages">
     <div class="page">
-      @if (showVideos && videos && videos.length > 0) {
+      @if (showVideos && videos[currentPage]) {
         <h2>{{videos[currentPage].title}}</h2>
         @if (isBrowser) {
           <iframe
@@ -16,7 +16,7 @@
     </div>
     @if (!isMobile) {
       <div class="page">
-        @if (showVideos && videos && videos.length > currentPage + 1) {
+        @if (showVideos && videos[currentPage + 1]) {
             <h2>{{videos[currentPage+1].title}}</h2>
             @if (isBrowser) {
               <iframe

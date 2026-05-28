@@ -30,6 +30,7 @@ export class QuestBoardAcademyCard implements OnInit {
   constructor() {
     if (isPlatformBrowser(this.platformId)) {
       this.isMobile = window.innerWidth < 950;
+      console.log('isMobile:', this.isMobile, 'width:', window.innerWidth);
     }
   }
 
@@ -80,8 +81,9 @@ export class QuestBoardAcademyCard implements OnInit {
       } else {
         this.currentPage += 2;
       }
+      console.log('currentPage:', this.currentPage, 'videos[currentPage]:', this.videos[this.currentPage]);
       this.showVideos = true;
-      this.cdr.detectChanges();
+      this.cdr.markForCheck();
     }, 0);
   }
 }

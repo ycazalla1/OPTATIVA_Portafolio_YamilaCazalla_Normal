@@ -53,7 +53,7 @@ export class QuestBoard implements OnInit {
       this.projects = await res.json();
       console.log(this.projects);
       // setTimeout(() => this.cdr.detectChanges());
-      this.cdr.detectChanges();
+      this.cdr.markForCheck();
     }
   }
 }
