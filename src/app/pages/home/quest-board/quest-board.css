@@ -1,63 +1,68 @@
-  .section-quest-board {
-    background-image: url('/assets/images/background/background-home.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* padding: 20px; */
+.section-quest-board {
+  background-image: url('/assets/images/background/background-home.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* padding: 20px; */
+}
+
+.section-quest-board > *:not(app-quest-board-contracts) {
+  padding: 20px;
+}
+
+.quest-board {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* horizontal */
+  align-items: flex-start;     /* vertical */
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 10%;
   }
+}
 
-  .section-quest-board > *:not(app-quest-board-contracts) {
-    padding: 20px;
+.project-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#titleProjects {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente */
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.projects h2 {
+  font-family: "Jersey 10", sans-serif;
+  /* font-size: 70px; */
+  font-size: 3rem;
+  color: #C89B3C;
+  text-shadow:
+      2px 2px 0 #3E2A1F,
+      6px 6px 0 #2A1C15;
+
+  @media (max-width: 768px) {
+    font-size: 55px;
   }
+}
 
-  .quest-board {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; /* horizontal */
-    align-items: flex-start;     /* vertical */
+.projects img {
+  width: 50px;
+  /* transform: scaleX(-1); */
+}
 
-    @media (max-width: 1000px) {
-      flex-direction: column;
-      align-items: center;
-      gap: 10%;
-    }
-  }
+#section-academy {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente */
+}
 
-  #titleProjects {
-    display: flex;
-    justify-content: center; /* centra horizontalmente */
-    align-items: center;     /* centra verticalmente */
-    gap: 20px;
-    margin-bottom: 10px;
-  }
-
-  .projects h2 {
-    font-family: "Jersey 10", sans-serif;
-    /* font-size: 70px; */
-    font-size: 3rem;
-    color: #C89B3C;
-    text-shadow:
-        2px 2px 0 #3E2A1F,
-        6px 6px 0 #2A1C15;
-
-    @media (max-width: 768px) {
-      font-size: 55px;
-    }
-  }
-
-  .projects img {
-    width: 50px;
-    /* transform: scaleX(-1); */
-  }
-
-  #section-academy {
-    display: flex;
-    justify-content: center; /* centra horizontalmente */
-    align-items: center;     /* centra verticalmente */
-  }
-
-  #section-expeditions {
-    display: flex;
-    justify-content: center; /* centra horizontalmente */
-    align-items: center;     /* centra verticalmente */
-  }
+#section-expeditions {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente */
+}

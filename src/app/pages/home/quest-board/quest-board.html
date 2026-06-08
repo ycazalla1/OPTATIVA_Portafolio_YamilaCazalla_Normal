@@ -7,13 +7,15 @@
       </div>
       <div class="project-card">
         @for (project of projects; track project.id) {
-          <app-quest-board-project-card [project]="project" />
+          <a [href]="project.github">
+            <app-quest-board-project-card [project]="project" />
+          </a>
         }
       </div>
     </div>
     <app-quest-board-inventory></app-quest-board-inventory>
   </div>
-  <app-quest-board-academy-card id="section-academy"></app-quest-board-academy-card>
+  <!-- <app-quest-board-academy-card id="section-academy"></app-quest-board-academy-card>
   <app-quest-board-contracts></app-quest-board-contracts>
-  <app-quest-board-expeditions id="section-expeditions"></app-quest-board-expeditions>
+  <app-quest-board-expeditions id="section-expeditions"></app-quest-board-expeditions> -->
 </section>
